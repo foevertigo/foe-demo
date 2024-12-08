@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Prediction Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Flood Prediction Analysis</h1>
+    <p>Analyze and predict potential natural disaster based on location and time.</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label for="Select Month">Select Month</label>
+      <select id="Select Month">
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+    </select>
+      <section class="input-section">
+      <label for="region">Select Region:</label>
+      <select id="region">
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam & Meghalaya">Assam & Meghalaya</option>
+        <option value="Naga Mani Mizo Tripura">Naga Mani Mizo Tripura</option>
+        <option value="Sub Himalayan west benga">Sub Himalayan west benga</option>
+        <option value="Gagentic west bengal">Gagentic west bengal</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Bihar">Bihar</option>
+        <option value="East Uttar Pradesh">East Uttar Pradesh</option>
+        <option value="West uttar pradesh">West uttar pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="Haryana Delhi and Chandigarh">Haryana Delhi and Chandigarh</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+        <option value="West Rajasthan">West Rajasthan</option>
+        <option value="East Rajasthan">East Rajasthan</option>
+        <option value="West madhya pradesh">West madhya pradesh</option>
+        <option value="East madhya pradesh">East madhya pradesh</option>
+        <option value="Gujarat region">Gujarat region</option>
+        <option value="Saurashtra and kutch">Saurashtra and kutch</option>
+        <option value="Konkan and goa">Konkan and goa</option>
+        <option value="Madhya Maharashtra">Madhya Maharashtra</option>
+        <option value="Matathwada">Matathwada</option>
+        <option value="Vidarbha">Vidarbha</option>
+        <option value="Chattisgarh">Chattisgarh</option>
+        <option value="Coastal Andhra Pradesh">Coastal Andhra Pradesh</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Rayal seema">Rayal seema</option>
+        <option value="Tamil nadu">Tamil nadu</option>
+        <option value="Coastal karnataka">Coastal karnataka</option>
+        <option value="North interior karnataka">North interior karnataka</option>
+        <option value="South interior karnataka">South interior karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+      </select>
+      <button onclick="predictDisaster()">Predict</button>
+    </section>
+
+    <section class="result-section">
+      <h2>Prediction Results</h2>
+      <div id="result"></div>
+    </section>
+
+    <section class="disaster-images">
+      <h2>Flood Images</h2>
+      <img src="pexels-denniz-futalan-339724-1344265.jpg" alt="Flood Image" class="disaster-image">
+      <img src="pexels-dibakar-roy-2432543-25189241.jpg" alt="Flood Image" class="disaster-image">
+      <img src="pexels-dibakar-roy-2432543-26202086.jpg" alt="Flood Image" class="disaster-image">
+      <img src="pexels-pok-rie-33563-14823608.jpg" alt="Flood Image" class="disaster-image">
+    </section>
+
+    <section class="map-section">
+      <h2>Interactive Map of India</h2>
+      <p>Click on a location to get disaster history.</p>
+      <img src="Screenshot 2024-11-06 at 11.42.50 PM.png" alt="Map of India" usemap="#india-map" class="map">
+      <map name="india-map">
+        <area shape="rect" coords="80,120,120,160" alt="Mumbai" onclick="showDisasterHistory('Mumbai')">
+        <area shape="rect" coords="150,50,190,90" alt="Delhi" onclick="showDisasterHistory('Delhi')">
+        <area shape="rect" coords="200,300,240,340" alt="Chennai" onclick="showDisasterHistory('Chennai')">
+        <area shape="rect" coords="260,120,300,160" alt="Kolkata" onclick="showDisasterHistory('Kolkata')">
+      </map>
+      <div id="map-result" class="map-result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Flood Prediction Analysis &copy; 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
